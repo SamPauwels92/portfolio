@@ -1,0 +1,54 @@
+.body {
+  width: 100%;
+  background-color: #2a2a2a;
+  padding: 0 100px;
+  color: #f8f8f8;
+}
+.main {
+  height: 90vh;
+}
+.text-container {
+  font-size: medium;
+  padding-top: 200px;
+  h2 {
+    font-size: 100px;
+  }
+}
+.portret-image {
+  width: 70%;
+  height: 50%;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.h1 {
+  font-size: 150px;
+}
+.h2 {
+  font-size: 100px;
+}
+.p {
+  font-size: 45px;
+}
+
+.image-large {
+  margin-top: 70px;
+  width: 250x;
+  height: 600px;
+}
+.image-small {
+  width: 300px;
+  height: 200px;
+}
+.section-pictures {
+  margin-top: 170px;
+}
+.paragraaf {
+  margin-top: 200px;
+  padding: 25px;
+}
+.image {
+  width: 700px;
+  height: 250px;
+  margin-top: 25px;
+}
