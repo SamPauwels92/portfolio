@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>website pagina home</title>
+    <title>project-item</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
@@ -12,52 +12,96 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 </head>
 <body class="body">
-    <header> 
-        <nav class="navbar bg-transparent p-3">
-            <a class="navbar-brand col-3" href="#">
-                <img src="assets/images/SP-Logo.svg" alt="Logo" width="100">
-            </a>
-            <ul class="nav col-4 justify-content-end">
-                <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Portfolio
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
-                        <li><a class="dropdown-item" aria-current="page" href="project.html">Poject</a></li>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/SP-Logo.svg" alt="Logo" width="100">
+                </a>
+                <!-- Hamburger Menu Button (visible on mobile) -->
+                <button class="navbar-toggler -toggler-icon" type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation Links (collapsible on mobile) -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Portfolio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                                <li><a class="dropdown-item" href="project.html">Project</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
                     </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="container-fluid main d-flex flex-column">
-        <section class="row">
-            <article class="col-12 col-md-3">
-                <img src="images/afbeelding-netwerk.jpg" alt="Project netwerk afbeelding" class=" image-large img-fluid">
-            </article>
-    
-            <article class="col-12 col-md-9">
-                <p class="paragraaf text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi aspernatur numquam sunt atque minus modi in dolorem quae quas, id consequuntur iste velit nulla recusandae adipisci impedit sapiente dicta repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta provident eveniet repellat quae, excepturi libero vitae commodi. Officia eum autem laborum soluta, eos facilis possimus assumenda iste culpa! Ipsa, cupiditate!</p>
-        
-                <section class="d-flex row section-pictures">
-                    <article class="col-12 col-md-4 mb-3">
-                        <img src="assets/images/sfeerbeeld-3.jpg" alt="Kleine afbeelding van sfeerbeeld 1" class="image-small img-fluid">
-                    </article>
-                    <article class="col-12 col-md-4 mb-3">
-                        <img src="assets/images/sfeerbeeld-3.jpg" alt="Kleine afbeelding van sfeerbeeld 2" class="image-small img-fluid">
-                    </article>
-                    <article class="col-12 col-md-4 mb-3">
-                        <img src="assets/images/sfeerbeeld-3.jpg" alt="Kleine afbeelding van sfeerbeeld 3" class="image-small img-fluid">
-                    </article>
-                </section>
-            </article>
-        </section>
+        <div class="container-fluid">
+            <!-- Main content row -->
+            <div class="row">
+                <!-- Left main column -->
+                <main class="col-md-8 py-4">
+                    <h1 class="display-5 mb-4">Magnum Opus Crypto Locker</h1>
+                    <p class="lead mb-4">
+                        n dit project heb ik gekozen voor het onderwerp CryptoLocker als magnum opus. Dit is een type ransomware dat door criminelen wordt gebruikt om bedrijven af te persen en geld te stelen. In mijn magnum opus leg ik uit wat CryptoLocker precies is, hoe het werkt, en vooral hoe bedrijven zich ertegen kunnen beschermen. Daarnaast voer ik een virtuele test uit om de effectiviteit van verschillende beschermingsmaatregelen te demonstreren.
+                    </p>
+                    <p class="mb-5">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nulla illo sed deserunt dicta praesentium voluptatibus qui, nobis tempore incidunt consectetur eveniet ad itaque mollitia sequi ipsam culpa odio fugiat.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <figure class="figure">
+                                <img src="assets/images/Nessus-scan.png" 
+                                     alt="Nessus vulnerability scan resultaten" 
+                                     class="figure-img img-fluid rounded shadow">
+                                <figcaption class="figure-caption">Nessus beveiligingsscan uitgevoerd op netwerk</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6">
+                            <figure class="figure">
+                                <img src="assets/images/hacker-67e6888d92343.jpg" 
+                                     alt="Anonieme hacker die ransomware implementeert" 
+                                     class="figure-img img-fluid rounded shadow">
+                                <figcaption class="figure-caption">CryptoLocker implementatie scenario</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </main>
+                <aside class="col-md-4 bg-light p-4">
+                    <div class="sticky-top pt-4">
+                        <img src="assets/images/Magnum Opus.png" 
+                             alt="Magnum Opus logo" 
+                             class="img-fluid mb-4 rounded-circle shadow-sm">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="h5 card-title">Technische Specificaties</h2>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">AES-256 encryptie</li>
+                                    <li class="mb-2">Multi-factor authenticatie</li>
+                                    <li class="mb-2">Cross-platform ondersteuning</li>
+                                    <li>Zero-knowledge architectuur</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
     </main>
-
-    <aside></aside>
     <footer class="text-center">
         <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
     </footer>

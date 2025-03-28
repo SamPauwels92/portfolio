@@ -5,7 +5,7 @@
   color: #f8f8f8;
 }
 .main {
-  height: 90vh;
+  height: 80vh;
 }
 .text-container {
   font-size: medium;
@@ -32,12 +32,12 @@
 }
 
 .image-large {
-  margin-top: 70px;
+  margin-top: 90px;
   width: 250x;
   height: 600px;
 }
 .image-small {
-  width: 300px;
+  width: 250px;
   height: 200px;
 }
 .section-pictures {
@@ -51,4 +51,12 @@
   width: 700px;
   height: 250px;
   margin-top: 25px;
+}
+.image-container img {
+  width: 100%;
+  max-width: 300px; /* Control image size */
+  margin: 10px;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
 }
