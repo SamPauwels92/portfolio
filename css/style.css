@@ -1,26 +1,15 @@
-.body {
+.body-dark {
   width: 100%;
   background-color: #2a2a2a;
   padding: 0 100px;
-  color: #f8f8f8;
+  color: #f8f9fa;
 }
-.main {
-  height: 80vh;
+.body-light {
+  width: 100%;
+  background-color: #F8F8F8 ;
+  padding: 0 100px;
+  color: #f8f9fa ;
 }
-.text-container {
-  font-size: medium;
-  padding-top: 200px;
-  h2 {
-    font-size: 100px;
-  }
-}
-.portret-image {
-  width: 70%;
-  height: 50%;
-  opacity: 0.5;
-  margin-bottom: 10px;
-}
-
 .h1 {
   font-size: 150px;
 }
@@ -31,32 +20,13 @@
   font-size: 45px;
 }
 
-.image-large {
-  margin-top: 90px;
-  width: 250x;
-  height: 600px;
-}
-.image-small {
-  width: 250px;
-  height: 200px;
-}
 .section-pictures {
   margin-top: 170px;
 }
-.paragraaf {
-  margin-top: 200px;
-  padding: 25px;
-}
-.image {
-  width: 700px;
-  height: 250px;
-  margin-top: 25px;
-}
-.image-container img {
-  width: 100%;
-  max-width: 300px; /* Control image size */
-  margin: 10px;
-}
+
 .navbar-toggler-icon {
   filter: invert(1);
+}
+.background-color {
+  background-color: #2a2a2a;
 }

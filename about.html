@@ -12,13 +12,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
    
     </head>
-        <body class="body">
+        <body class="body-dark">
             <header> 
-                <nav class="navbar bg-transparent p-3">
-                    <a class="navbar-brand col-4" href="#">
-                        <img src="assets/images/SP-Logo.svg" alt="Logo" width="100">
-                    </a>
-                    <ul class="nav col-4 justify-content-end">
+                <nav class="navbar navbar-expand-lg bg-transparent p-3">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/images/SP-Logo.svg" alt="Logo" width="60">
+                        </a>
+                        <!-- Hamburger Menu Button (visible on mobile) -->
+                        <button class="navbar-toggler -toggler-icon" type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#navbarNav"
+                                aria-controls="navbarNav" 
+                                aria-expanded="false" 
+                                aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <!-- Navigation Links (collapsible on mobile) -->
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active text-light" aria-current="page" href="#nav-item-2">About</a></li>
                         
@@ -36,27 +49,45 @@
                         <!-- Correct geneste nav-items -->
                         <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
                     </ul>
+                    </div>
+                    </div>
                 </nav>
             </header>
-        <main class="main d-flex justify-content-end">
-            <section class="container d-flex w-50 flex-column">
-                <img src="assets/images/sfeerbeeld-2.jpg" alt="foto-van-mijzelf" class="portret-image img-fluid mb-3 align-items-center">
-                <img src="assets/images/sfeerbeeld-3.jpg" alt="foto-van-mijzelf" class="portret-image img-fluid mb-3 align-items-center">
-            </section>
-            <section class="text-container container w-50 text-center">
-                <h2 class="mb-4">Over Mij</h2>
-                <p>Mijn naam is Sam Pauwels, een gedreven en leergierige student in het graduaat Systeem- en Netwerkbeheer.<br> Na negen jaar als procesoperator in de chemische sector en meer dan twee jaar werkervaring in een laboratorium, heb ik besloten mijn passie voor IT te volgen.<br> Daarom school ik mij om via een avondopleiding, naast mijn huidige job.<br>
-                    Met mijn analytische vaardigheden, doorzettingsvermogen en passie voor technologie streef ik ernaar een succesvolle overstap te maken naar de IT-sector. Mijn doel is om binnen drie jaar een carrière op te bouwen in systeem- en netwerkbeheer, waar ik mijn probleemoplossend vermogen en technische kennis optimaal kan inzetten.<br>
-                    Op deze website deel ik mijn projecten en vaardigheden.<br> Neem gerust contact op voor meer informatie of mogelijke samenwerkingen!
-                    </p>
-            </section>
+            <main class="d-flex justify-content-end">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Image Column (Left Side) -->
+                        <section class="col-md-4 order-md-1 order-2">
+                            <img src="assets/images/samfototijdelijk.jpg" alt="Description of the image for accessibility" class="img-fluid">
+                        </section>
+            
+                        <!-- Content Column (Right Side) -->
+                        <section class="col-md-8 order-md-2 order-1">
+                            <h1 class="display-4 mb-4">ABOUT</h1>
+                            <p class="lead">Mijn naam is Sam Pauwels en Welkom op mijn portfolio website.</p>
+            
+                            <h2 class="mt-5 mb-4">Achtergrond</h2>
+                            <p class="lead">
+                                Momenteel volg ik een graduaat in Systeem- en Netwerkbeheer. Na een carrière van negen jaar als procesoperator in de chemische sector en meer dan twee jaar ervaring in een laboratorium, heb ik de keuze gemaakt om mijn passie voor IT te volgen.<br>  
+                                Via een intensieve avondopleiding combineer ik studie en werk om de overstap naar de IT-sector te realiseren. Dankzij mijn analytische vaardigheden, doorzettingsvermogen en technische interesse ontwikkel ik me tot een competente IT-professional.<br>  
+                                Mijn doel is om binnen drie jaar een carrière op te bouwen in systeem- en netwerkbeheer, waar ik mijn probleemoplossend vermogen en technische expertise optimaal kan inzetten. Op deze website deel ik mijn projecten en vaardigheden.
+                            </p>
+            
+                            <h2 class="mt-5 mb-4">Contact</h2>
+                            <p class="lead">
+                                Heeft u vragen of interesse in een samenwerking? Bezoek gerust de <a href="contact.html">contactpagina</a> om in gesprek te gaan.
 
-        </main>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            
+        
         <aside></aside>
         <footer><footer class="text-center p-3">
             <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
         </footer>
         </footer>
-        
     </body>
     </html>
