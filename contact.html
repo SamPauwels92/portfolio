@@ -48,25 +48,84 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1 class="h1">Let's Get Social !</h1>
-        </section>
-        <section>
-            <h2 class="h2">Telefoon Nummer</h2>
-            <p class="p"><a href="tel:00000000">000000000</a>
-            </p>
-        </section>
-        <section>
-            <h2 class="h2">Email Adress</h2>
-            <p class="p"><a href="mailto:sam_pauwels_05@hotmail.com">sam_pauwels_05@hotmail.com</a></p>
-            <h2 class="h2">Instagram</h2>
-            <p class="p">link naar instagram</p>
-        </section>
+    <main class="container-fluid px-0">
+        <div class="row g-0 min-vh-100">
+            <!-- Contact Formulier -->
+            <aside class="col-lg-4 bg-dark p-4 p-lg-5 border-end border-secondary">
+                <div class="sticky-lg-top pt-lg-4">
+                    <h2 class="text-uppercase fs-5 text-muted">Contacteer mij</h2>
+                    <h1 class="display-4 mb-4 text-white">GET IN TOUCH</h1>
+                    
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label text-light">Voornaam *</label>
+                                <input type="text" class="form-control bg-dark text-light border-secondary" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label text-light">Achternaam *</label>
+                                <input type="text" class="form-control bg-dark text-light border-secondary" id="lastName" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label text-light">E-mailadres *</label>
+                                <input type="email" class="form-control bg-dark text-light border-secondary" id="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label text-light">Bericht *</label>
+                                <textarea class="form-control bg-dark text-light border-secondary" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
+                                    <label class="form-check-label text-light" for="privacyPolicy">
+                                        Ik accepteer het <a href="privacy.html" class="text-primary">privacybeleid</a> *
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">VERSTUUR BERICHT</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <hr class="my-4 border-secondary">
+                    
+                    <div class="text-center text-md-start">
+                        <h3 class="h5 text-light">Direct contact</h3>
+                        <p class="mb-1 text-light"><i class="bi bi-envelope me-2"></i>sampauwels03@ap.be</p>
+                        <p class="mb-0 text-light"><i class="bi bi-phone me-2"></i> 0000000000 </p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <section class="col-lg-8 p-4 p-lg-5 d-flex align-items-center bg-dark">
+                <div class="text-center text-lg-start py-5">
+                    <h2 class="display-5 mb-4 text-white">Laten we samenwerken</h2>
+                    <p class="lead mb-4 text-light">Heb je een project in gedachten of wil je meer weten over mijn werk? Vul het formulier in en ik neem zo snel mogelijk contact met je op.</p>
+                    
+                    <div class="mt-5">
+                        <div class="card border-secondary bg-dark">
+                            <div class="card-body">
+                                <h3 class="h5 text-white">Social media</h3>
+                                <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3 fs-3">
+                                    <a href="#" class="text-decoration-none text-primary"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="text-decoration-none text-primary"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="text-decoration-none text-primary"><i class="bi bi-behance"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-    <aside></aside>
-    <footer class="text-center">
-        <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
-    </footer>
+    
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
 </body>
 </html>

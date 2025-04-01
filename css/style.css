@@ -4,6 +4,14 @@
   padding: 0 100px;
   color: #f8f9fa;
 }
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1; /* Ensure the image is behind other content */
+    background-color: #2a2a2a;
+ }
 .body-light {
   width: 100%;
   background-color: #F8F8F8 ;
@@ -29,4 +37,36 @@
 }
 .background-color {
   background-color: #2a2a2a;
+}
+/* Name positioning styles */
+.name-top-left {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  color: white;
+  font-size: 150px; 
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.name-bottom-right {
+  position: absolute;
+  bottom: 25%;
+  right: 15%;
+  color: white;
+  font-size: 150px ; 
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+.footer-area {
+  width: 100%;
+  padding-bottom: 1rem; /* Space between student text and footer */
+}
+
+.student-text {
+  font-size: 1.75rem; /* Slightly larger than default */
+  font-weight: 300;
+  padding-bottom: 1rem; /* Space above footer */
 }
