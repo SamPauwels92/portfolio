@@ -25,14 +25,6 @@
   color: #f8f9fa;
 }
 
-.h1 {
-  font-size: 150px;
-}
-
-.h2 {
-  font-size: 100px;
-}
-
 .p {
   font-size: 45px;
 }
@@ -43,6 +35,9 @@
 
 .navbar-toggler-icon {
   filter: invert(1);
+}
+.fs-1 {
+  font-size: 150px !important;
 }
 
 .background-color {
@@ -55,7 +50,6 @@
   top: 25%;
   left: 15%;
   color: white;
-  font-size: 150px;
   font-weight: 300;
   line-height: 1.2;
   margin: 0;
@@ -66,7 +60,6 @@
   bottom: 25%;
   right: 2.5%;
   color: white;
-  font-size: 150px;
   font-weight: 300;
   line-height: 1.2;
   margin: 0;
