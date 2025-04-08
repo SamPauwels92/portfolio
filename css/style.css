@@ -64,27 +64,6 @@ html, body {
   background-color: #2a2a2a;
 }
 
-/* Name positioning styles */
-.name-top-left {
-  position: absolute;
-  top: 5%;
-  left: 10%;
-  color: white;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.name-bottom-right {
-  position: absolute;
-  bottom: 25%;
-  right: 2.5%;
-  color: white;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0;
-}
-
 .footer-area {
   width: 100%;
   padding-bottom: 1rem; /* Space between student text and footer */
@@ -94,4 +73,73 @@ html, body {
   font-size: 1.75rem; /* Slightly larger than default */
   font-weight: 300;
   padding-bottom: 1rem; /* Space above footer */
+}
+
+/* Stijlen voor schermen breder dan 767px (tablets en desktops) */
+@media (min-width: 768px) {
+  .name-top-left {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: white;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 1rem; /* Voeg een basis font-size toe voor grotere schermen */
+  }
+
+  .name-bottom-right {
+    position: absolute;
+    bottom: 25%;
+    right: 2.5%;
+    color: white;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 1rem; /* Voeg een basis font-size toe voor grotere schermen */
+  }
+
+  .fs-1 {
+    font-size: 150px !important; /* Behoud de grote font-size op desktop */
+  }
+}
+
+/* Stijlen voor schermen smaller dan 768px (typische smartphones) */
+@media (max-width: 767px) {
+  .body-dark {
+    padding: 0 20px; /* Minder zijdelingse padding op mobiel */
+  }
+  .fs-1 {
+    font-size: 70px !important; /* Kleinere lettergrootte voor de grote titels */
+  }
+  .section-pictures {
+    margin-top: 100px; /* Minder top margin op mobiel */
+  }
+
+  /* Alternatieve lay-out voor de namen op mobiel (centreren) */
+  .main.d-flex {
+    flex-direction: column; /* Stapel de items verticaal */
+    align-items: center; /* Centreer horizontaal */
+    justify-content: center; /* Centreer verticaal */
+  }
+  .name-top-left,
+  .name-bottom-right {
+    position: static; /* Verwijder absolute positionering */
+    text-align: center; /* Centreer de tekst */
+    margin: 0.5em 0; /* Voeg wat verticale marge toe */
+    font-size: 1.5rem; /* Kleinere lettergrootte voor mobiel */
+  }
+}
+
+/* Eventueel nog kleinere aanpassingen voor zeer kleine schermen */
+@media (max-width: 480px) {
+  .fs-1 {
+    font-size: 50px !important;
+  }
+  .name-top-left {
+    font-size: 1.2rem;
+  }
+  .name-bottom-right {
+    font-size: 1.2rem;
+  }
 }
