@@ -1,145 +1,181 @@
+/* ====== BASE & RESET ====== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
 .body-dark {
   width: 100%;
   background-color: #262626;
-  padding: 0 100px;
   color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
+  padding: 0 20px;
 }
-/* Add this to your CSS */
-aside img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensures whole image is visible */
-  max-height: 100vh; /* Optional: Limit maximum height */
-}
-.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('../assets/images/index foto(1).png');
-  background-size: cover;
-  background-position: center 20%; /* <— this shifts the image down */
-  background-repeat: no-repeat;
-  z-index: -1;
-  background-color: #262626;
-}
+
+/* ====== BACKGROUND ELEMENTS ====== */
+.background-image, 
 .dark-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* 0.5 = 50% darkness */
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
+.background-image {
+  background: #262626 url('../assets/images/index foto(1).png') center 20%/cover no-repeat;
 }
 
-.p {
-  font-size: 45px;
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.section-pictures {
-  margin-top: 170px;
+/* ====== TYPOGRAPHY ====== */
+.p { font-size: 45px; }
+
+.display-4 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
-.navbar-toggler-icon {
-  filter: invert(1);
-}
-.fs-1 {
-  font-size: 150px !important;
-}
-
-.background-color {
-  background-color: #2a2a2a;
-}
-
-.footer-area {
-  width: 100%;
-  padding-bottom: 1rem; /* Space between student text and footer */
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .student-text {
-  font-size: 1.75rem; /* Slightly larger than default */
+  font-size: 1.75rem;
   font-weight: 300;
-  padding-bottom: 1rem; /* Space above footer */
+  padding-bottom: 1rem;
 }
 
-/* Stijlen voor schermen breder dan 767px (tablets en desktops) */
+/* ====== COMPONENTS ====== */
+/* Navigation */
+.navbar-toggler-icon { filter: invert(1); }
+
+/* Images */
+aside img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100%;
+  margin-bottom: 20px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded { border-radius: 0.25rem !important; }
+
+/* Sections */
+.section-pictures {
+  margin-top: 100px;
+}
+
+.background-color { background-color: #2a2a2a; }
+
+/* Footer */
+.footer-area {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+/* ====== UTILITY CLASSES ====== */
+.text-light { 
+  color: #f8f9fa !important; 
+}
+.text-light:hover { color: #d1d1d1 !important; }
+
+.text-decoration-none { text-decoration: none !important; }
+
+.mt-5 { margin-top: 3rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+
+/* ====== LAYOUT ====== */
+.container-fluid {
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ====== RESPONSIVE ADJUSTMENTS ====== */
+/* Desktop (≥768px) */
 @media (min-width: 768px) {
-  .name-top-left {
+  .body-dark { padding: 0 100px; }
+  
+  .fs-1 { font-size: 150px !important; }
+  
+  aside {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  main {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+
+  .name-top-left, .name-bottom-right {
     position: absolute;
+    color: white;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .name-top-left {
     top: 5%;
     left: 10%;
-    color: white;
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 0;
-    font-size: 1rem; /* Voeg een basis font-size toe voor grotere schermen */
   }
-
+  
   .name-bottom-right {
-    position: absolute;
     bottom: 25%;
     right: 2.5%;
-    color: white;
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 0;
-    font-size: 1rem; /* Voeg een basis font-size toe voor grotere schermen */
-  }
-
-  .fs-1 {
-    font-size: 150px !important; /* Behoud de grote font-size op desktop */
   }
 }
 
-/* Stijlen voor schermen smaller dan 768px (typische smartphones) */
+/* Mobile (<768px) */
 @media (max-width: 767px) {
-  .body-dark {
-    padding: 0 20px; /* Minder zijdelingse padding op mobiel */
-  }
-  .fs-1 {
-    font-size: 70px !important; /* Kleinere lettergrootte voor de grote titels */
-  }
-  .section-pictures {
-    margin-top: 100px; /* Minder top margin op mobiel */
+  .fs-1 { font-size: 70px !important; }
+  
+  .row { flex-direction: column; }
+  
+  aside, main {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 
-  /* Alternatieve lay-out voor de namen op mobiel (centreren) */
   .main.d-flex {
-    flex-direction: column; /* Stapel de items verticaal */
-    align-items: center; /* Centreer horizontaal */
-    justify-content: center; /* Centreer verticaal */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+  
   .name-top-left,
   .name-bottom-right {
-    position: static; /* Verwijder absolute positionering */
-    text-align: center; /* Centreer de tekst */
-    margin: 0.5em 0; /* Voeg wat verticale marge toe */
-    font-size: 1.5rem; /* Kleinere lettergrootte voor mobiel */
+    position: static;
+    text-align: center;
+    margin: 0.5em 0;
+    font-size: 1.5rem;
   }
 }
 
-/* Eventueel nog kleinere aanpassingen voor zeer kleine schermen */
+/* Extra Small (<480px) */
 @media (max-width: 480px) {
-  .fs-1 {
-    font-size: 50px !important;
-  }
-  .name-top-left {
-    font-size: 1.2rem;
-  }
-  .name-bottom-right {
-    font-size: 1.2rem;
-  }
+  .fs-1 { font-size: 50px !important; }
+  
+  .name-top-left,
+  .name-bottom-right { font-size: 1.2rem; }
+  
+  .section-pictures { margin-top: 80px; }
 }
