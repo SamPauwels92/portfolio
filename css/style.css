@@ -1,4 +1,4 @@
-/* ====== BASE & RESET ====== */
+/* ====== BASE STYLES ====== */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,10 +10,9 @@ html, body {
   width: 100%;
   background-color: #262626;
   color: #f8f9fa;
-  padding: 0 20px;
 }
 
-/* ====== BACKGROUND ELEMENTS ====== */
+/* ====== BACKGROUND STYLES ====== */
 .background-image, 
 .dark-overlay {
   position: fixed;
@@ -40,6 +39,38 @@ html, body {
   font-weight: 300;
   line-height: 1.2;
 }
+/* ====== MINIMALISTISCHE DROPDOWN ====== */
+.dropdown-menu {
+  background-color: transparent; /* Geen achtergrond */
+  border: none;                  /* Geen rand */
+  box-shadow: none;              /* Geen schaduw */
+  border-radius: 0;              /* Geen afronding */
+  padding: 0;                    /* Geen extra ruimte */
+  margin-top: 0.25rem;           /* Kleine afstand onder menu */
+}
+
+/* Dropdown-items: witte tekst, zonder blok-achtergrond */
+.dropdown-menu .dropdown-item {
+  background-color: transparent; /* Geen achtergrond */
+  color: #f8f9fa;                /* Witte tekst */
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+/* Hover-effect: alleen tekstkleur lichter */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: #f8f9fa;
+  background-color: transparent; /* Geen hover-blok */
+  text-decoration: underline;    /* Optioneel voor visuele feedback */
+}
+
+/* Verberg standaard Bootstrap-pijltje als je dat wil */
+.navbar .dropdown-toggle::after {
+  display: none;
+}
 
 .lead {
   font-size: 1.25rem;
@@ -52,11 +83,12 @@ html, body {
   padding-bottom: 1rem;
 }
 
-/* ====== COMPONENTS ====== */
-/* Navigation */
-.navbar-toggler-icon { filter: invert(1); }
+/* ====== NAVIGATION ====== */
+.navbar-toggler-icon { 
+  filter: invert(1); 
+}
 
-/* Images */
+/* ====== IMAGE STYLES ====== */
 aside img {
   width: 100%;
   height: auto;
@@ -70,57 +102,90 @@ aside img {
   height: auto;
 }
 
-.rounded { border-radius: 0.25rem !important; }
+.project-image {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
 
-/* Sections */
+.rounded { 
+  border-radius: 0.25rem !important; 
+}
+
+/* ====== LAYOUT STYLES ====== */
+.container-fluid {
+  padding: 0;
+  max-width: 100%;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .section-pictures {
   margin-top: 100px;
 }
 
-.background-color { background-color: #2a2a2a; }
+.background-color { 
+  background-color: #2a2a2a; 
+}
 
-/* Footer */
+/* ====== CARD & LINK STYLES ====== */
+.text-light { 
+  color: #f8f9fa !important; 
+}
+
+.text-light:hover { 
+  color: #d1d1d1 !important; 
+}
+
+.text-decoration-none { 
+  text-decoration: none !important; 
+}
+
+/* ====== SPACING UTILITIES ====== */
+.mt-5 { 
+  margin-top: 3rem !important; 
+}
+
+.mb-4 { 
+  margin-bottom: 1.5rem !important; 
+}
+
+/* ====== FOOTER ====== */
 .footer-area {
   width: 100%;
   padding-bottom: 1rem;
 }
 
-/* ====== UTILITY CLASSES ====== */
-.text-light { 
-  color: #f8f9fa !important; 
-}
-.text-light:hover { color: #d1d1d1 !important; }
-
-.text-decoration-none { text-decoration: none !important; }
-
-.mt-5 { margin-top: 3rem !important; }
-.mb-4 { margin-bottom: 1.5rem !important; }
-
-/* ====== LAYOUT ====== */
-.container-fluid {
-  padding: 0 15px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
+/* ====== STICKY ASIDE ====== */
+.sticky-top {
+  top: 20px;
+  padding-right: 15px;
 }
 
 /* ====== RESPONSIVE ADJUSTMENTS ====== */
 /* Desktop (≥768px) */
 @media (min-width: 768px) {
-  .body-dark { padding: 0 100px; }
-  
-  .fs-1 { font-size: 150px !important; }
+  .fs-1 { 
+    font-size: 150px !important; 
+  }
   
   aside {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
+    padding-right: 15px;
   }
   
   main {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
+    padding-left: 15px;
   }
 
   .name-top-left, .name-bottom-right {
@@ -143,11 +208,22 @@ aside img {
   }
 }
 
+/* Tablet (≥576px) */
+@media (min-width: 576px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
 /* Mobile (<768px) */
 @media (max-width: 767px) {
-  .fs-1 { font-size: 70px !important; }
+  .fs-1 { 
+    font-size: 70px !important; 
+  }
   
-  .row { flex-direction: column; }
+  .row { 
+    flex-direction: column; 
+  }
   
   aside, main {
     width: 100%;
@@ -172,10 +248,16 @@ aside img {
 
 /* Extra Small (<480px) */
 @media (max-width: 480px) {
-  .fs-1 { font-size: 50px !important; }
+  .fs-1 { 
+    font-size: 50px !important; 
+  }
   
   .name-top-left,
-  .name-bottom-right { font-size: 1.2rem; }
+  .name-bottom-right { 
+    font-size: 1.2rem; 
+  }
   
-  .section-pictures { margin-top: 80px; }
+  .section-pictures { 
+    margin-top: 80px; 
+  }
 }
