@@ -39,38 +39,6 @@ html, body {
   font-weight: 300;
   line-height: 1.2;
 }
-/* ====== MINIMALISTISCHE DROPDOWN ====== */
-.dropdown-menu {
-  background-color: transparent; /* Geen achtergrond */
-  border: none;                  /* Geen rand */
-  box-shadow: none;              /* Geen schaduw */
-  border-radius: 0;              /* Geen afronding */
-  padding: 0;                    /* Geen extra ruimte */
-  margin-top: 0.25rem;           /* Kleine afstand onder menu */
-}
-
-/* Dropdown-items: witte tekst, zonder blok-achtergrond */
-.dropdown-menu .dropdown-item {
-  background-color: transparent; /* Geen achtergrond */
-  color: #f8f9fa;                /* Witte tekst */
-  padding: 0.5rem 1rem;
-  font-weight: 300;
-  border-radius: 0;
-  transition: color 0.2s ease;
-}
-
-/* Hover-effect: alleen tekstkleur lichter */
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus {
-  color: #f8f9fa;
-  background-color: transparent; /* Geen hover-blok */
-  text-decoration: underline;    /* Optioneel voor visuele feedback */
-}
-
-/* Verberg standaard Bootstrap-pijltje als je dat wil */
-.navbar .dropdown-toggle::after {
-  display: none;
-}
 
 .lead {
   font-size: 1.25rem;
@@ -81,6 +49,36 @@ html, body {
   font-size: 1.75rem;
   font-weight: 300;
   padding-bottom: 1rem;
+}
+
+/* ====== MINIMALISTISCHE DROPDOWN ====== */
+.dropdown-menu {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 0.25rem;
+}
+
+.dropdown-menu .dropdown-item {
+  background-color: transparent;
+  color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: #f8f9fa;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.navbar .dropdown-toggle::after {
+  display: none;
 }
 
 /* ====== NAVIGATION ====== */
@@ -260,4 +258,19 @@ aside img {
   .section-pictures { 
     margin-top: 80px; 
   }
+}
+
+/* ====== CUSTOM BUTTON: LIGHT BROWN ====== */
+.btn-light-brown {
+  background-color: #A97455;
+  border-color: #A97455;
+  color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-light-brown:hover,
+.btn-light-brown:focus {
+  background-color: #926043;
+  border-color: #926043;
+  color: #fff;
 }

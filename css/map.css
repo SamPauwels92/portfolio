@@ -1,0 +1,7 @@
+#map-belsele {
+    /* neem de volle breedte in van het parent element en heeft een hoogte van 250px */
+    /* Set the height to 250px for this container as well */
+    height: 250px;
+    /* Set the width to 100% to fill the parent element */
+    width: 100%;
+}
