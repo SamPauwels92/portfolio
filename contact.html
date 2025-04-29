@@ -31,6 +31,7 @@
 
    <!-- Custom JavaScript files -->
     <script defer src="js/map-belsele.js"></script>
+    <script src="js/form-handler.js" defer></script>
 </head>
 <body class="body-dark">
     <header> 
@@ -70,51 +71,51 @@
 
     <main class="container-fluid px-0">
         <div class="row g-0 min-vh-100">
-            <!-- Contact Form -->
-            <aside class="col-lg-4 bg-dark p-4 p-lg-5 border-end border-secondary">
-                <div class="sticky-lg-top pt-lg-4">
-                    <h2 class="text-uppercase fs-5 text-muted">Contacteer mij</h2>
-                    <h1 class="display-4 mb-4 text-white">GET IN TOUCH</h1>
-                    
-                    <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/thank-you.html" id="contactForm">
-                        <input type="hidden" name="form-name" value="contact">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="firstName" class="form-label text-light">Voornaam *</label>
-                                <input type="text" class="form-control bg-dark text-light border-secondary" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="lastName" class="form-label text-light">Achternaam *</label>
-                                <input type="text" class="form-control bg-dark text-light border-secondary" id="lastName" name="lastName" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="email" class="form-label text-light">E-mailadres *</label>
-                                <input type="email" class="form-control bg-dark text-light border-secondary" id="email" name="email" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label text-light">Bericht *</label>
-                                <textarea class="form-control bg-dark text-light border-secondary" id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
-                                    <label class="form-check-label text-light" for="privacyPolicy">
-                                        Ik accepteer het <a href="privacy.html" class="text-primary">privacybeleid</a> *
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div data-netlify-recaptcha="true"></div>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-light-brown btn-lg w-100">VERSTUUR BERICHT</button>
+        <!-- Contact Form -->
+        <aside class="col-lg-4 bg-dark p-4 p-lg-5 border-end border-secondary">
+            <div class="sticky-lg-top pt-lg-4">
+                <h2 class="text-uppercase fs-5 text-muted">Contacteer mij</h2>
+                <h1 class="display-4 mb-4 text-white">GET IN TOUCH</h1>
+                
+                <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" id="contactForm">
+                    <input type="hidden" name="form-name" value="contact">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label text-light">Voornaam *</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label text-light">Achternaam *</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label text-light">E-mailadres *</label>
+                            <input type="email" class="form-control bg-dark text-light border-secondary" id="email" name="email" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label text-light">Bericht *</label>
+                            <textarea class="form-control bg-dark text-light border-secondary" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                                <label class="form-check-label text-light" for="privacyPolicy">
+                                    Ik accepteer het <a href="privacy.html" class="text-primary">privacybeleid</a> *
+                                </label>
                             </div>
                         </div>
-                    </form>
+                        <div class="col-12">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-light-brown btn-lg w-100">VERSTUUR BERICHT</button>
+                        </div>
+                    </div>
+                </form>
 
-                    <hr class="my-4 border-secondary">
-                </div>
-            </aside>
+                <hr class="my-4 border-secondary">
+            </div>
+        </aside>
 
             <!-- Right content block -->
              
@@ -153,5 +154,22 @@
             <p class="mb-0">&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
         </div>
     </footer>
+     <!-- Modal HTML for Thank You Message -->
+     <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white" id="thankYouModalLabel">Bedankt!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-brown" data-bs-dismiss="modal">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
