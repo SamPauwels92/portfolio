@@ -1,15 +1,31 @@
+/* ====== ROOT VARIABELEN ====== */
+:root {
+  --color-dark-bg: #262626;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-light-text: #bfbfbf;
+  --color-muted-text: #bfbfbf;
+  --color-hover-text: #f8f8f8;
+  --color-section-bg: #262626;
+  --color-brown: #A97455;
+  --color-brown-dark: #926043;
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 /* ====== BASE STYLES ====== */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
+  font-family: var(--font-main);
+  background-color: var(--color-dark-bg);
+  color: var(--color-light-text);
 }
 
 .body-dark {
   width: 100%;
-  background-color: #262626;
-  color: #f8f9fa;
+  background-color: var(--color-dark-bg);
+  color: var(--color-light-text);
 }
 
 /* ====== BACKGROUND STYLES ====== */
@@ -24,15 +40,17 @@ html, body {
 }
 
 .background-image {
-  background: #262626 url('../assets/images/index foto(1).png') center 20%/cover no-repeat;
+  background: var(--color-dark-bg) url('../assets/images/index foto(1).png') center 20%/cover no-repeat;
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--color-overlay);
 }
 
-/* ====== TYPOGRAPHY ====== */
-.p { font-size: 45px; }
+/* ====== TYPOGRAFIE ====== */
+.headline-large {
+  font-size: 45px;
+}
 
 .display-4 {
   font-size: 2.5rem;
@@ -49,6 +67,88 @@ html, body {
   font-size: 1.75rem;
   font-weight: 300;
   padding-bottom: 1rem;
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.student-text h1 {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.welcome-message {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 20%;
+}
+
+.student-text:hover h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.student-text:hover .welcome-message {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* ====== NAAMGROOTTE EN POSITIES ====== */
+.fs-1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .fs-1 { font-size: 6rem; }
+}
+
+@media (min-width: 992px) {
+  .fs-1 { font-size: 8rem; }
+}
+
+@media (min-width: 1200px) {
+  .fs-1 { font-size: 10rem; }
+}
+
+@media (min-width: 1400px) {
+  .fs-1 {  font-size: 12rem !important; }
+}
+
+.name-top-left, .name-bottom-right {
+  position: absolute;
+  color: white;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  z-index: 1;
+}
+
+.name-top-left {
+  top: 5%;
+  left: 10%;
+}
+
+.name-bottom-right {
+  bottom: 25%;
+  right: 2.5%;
+}
+
+@media (max-width: 767px) {
+  .name-top-left, .name-bottom-right {
+    position: static;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
 }
 
 /* ====== MINIMALISTISCHE DROPDOWN ====== */
@@ -63,7 +163,7 @@ html, body {
 
 .dropdown-menu .dropdown-item {
   background-color: transparent;
-  color: #f8f9fa;
+  color: var(--color-muted-text);
   padding: 0.5rem 1rem;
   font-weight: 300;
   border-radius: 0;
@@ -72,7 +172,7 @@ html, body {
 
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  color: #f8f9fa;
+  color: var(--color-light-text);
   background-color: transparent;
   text-decoration: underline;
 }
@@ -100,17 +200,12 @@ aside img {
   height: auto;
 }
 
-.project-image {
-  max-width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
+.project-image:hover {
+  transform: scale(1.03);
 }
 
 .rounded { 
-  border-radius: 0.25rem !important; 
+  border-radius: 0.25rem; 
 }
 
 /* ====== LAYOUT STYLES ====== */
@@ -129,30 +224,30 @@ aside img {
   margin-top: 100px;
 }
 
-.background-color { 
-  background-color: #2a2a2a; 
+.bg-section {
+  background-color: var(--color-section-bg);
 }
 
 /* ====== CARD & LINK STYLES ====== */
 .text-light { 
-  color: #f8f9fa !important; 
+  color: var(--color-muted-text); 
 }
 
 .text-light:hover { 
-  color: #d1d1d1 !important; 
+  color: var(--color-hover-text); 
 }
 
 .text-decoration-none { 
-  text-decoration: none !important; 
+  text-decoration: none; 
 }
 
 /* ====== SPACING UTILITIES ====== */
 .mt-5 { 
-  margin-top: 3rem !important; 
+  margin-top: 3rem; 
 }
 
 .mb-4 { 
-  margin-bottom: 1.5rem !important; 
+  margin-bottom: 1.5rem; 
 }
 
 /* ====== FOOTER ====== */
@@ -168,61 +263,17 @@ aside img {
 }
 
 /* ====== RESPONSIVE ADJUSTMENTS ====== */
-/* Desktop (≥768px) */
-@media (min-width: 768px) {
-  .fs-1 { 
-    font-size: 150px !important; 
-  }
-  
-  aside {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    padding-right: 15px;
-  }
-  
-  main {
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
-    padding-left: 15px;
-  }
-
-  .name-top-left, .name-bottom-right {
-    position: absolute;
-    color: white;
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 0;
-    font-size: 1rem;
-  }
-  
-  .name-top-left {
-    top: 5%;
-    left: 10%;
-  }
-  
-  .name-bottom-right {
-    bottom: 25%;
-    right: 2.5%;
-  }
-}
-
-/* Tablet (≥576px) */
 @media (min-width: 576px) {
   .container-fluid {
     padding: 0 15px;
   }
 }
 
-/* Mobile (<768px) */
 @media (max-width: 767px) {
-  .fs-1 { 
-    font-size: 70px !important; 
-  }
-  
-  .row { 
-    flex-direction: column; 
-  }
-  
+  .fs-1 { font-size: 3rem; }
+
+  .row { flex-direction: column; }
+
   aside, main {
     width: 100%;
     max-width: 100%;
@@ -234,43 +285,4 @@ aside img {
     align-items: center;
     justify-content: center;
   }
-  
-  .name-top-left,
-  .name-bottom-right {
-    position: static;
-    text-align: center;
-    margin: 0.5em 0;
-    font-size: 1.5rem;
-  }
-}
-
-/* Extra Small (<480px) */
-@media (max-width: 480px) {
-  .fs-1 { 
-    font-size: 50px !important; 
-  }
-  
-  .name-top-left,
-  .name-bottom-right { 
-    font-size: 1.2rem; 
-  }
-  
-  .section-pictures { 
-    margin-top: 80px; 
-  }
-}
-
-/* ====== CUSTOM BUTTON: LIGHT BROWN ====== */
-.btn-light-brown {
-  background-color: #A97455;
-  border-color: #A97455;
-  color: #fff;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.btn-light-brown:hover,
-.btn-light-brown:focus {
-  background-color: #926043;
-  border-color: #926043;
-  color: #fff;
 }

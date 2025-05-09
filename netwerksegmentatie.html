@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netwerksegmentatie voor KMO | Portfolio Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body class="body-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/SP-Logo.svg" alt="Logo" width="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active text-light" href="#" role="button" data-bs-toggle="dropdown">Portfolio</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="dropdown-item nav-link" href="cryptolocker.html">Cybersecurity</a></li>
+                        <li><a class="dropdown-item nav-link" href="backup.html">Backup-veam</a></li>
+                        <li><a class="dropdown-item nav-link" href="linux.html">linux-monitoring</a></li>
+                        <li><a class="dropdown-item nav-link active" aria-current="page" href="netwerksegmentatie.html">netwerksegmentatie</a></li>
+                        <li><a class="dropdown-item nav-link" href="wifi.html">wifi-optimalisatie</a></li>
+                        <li><a class="dropdown-item nav-link" href="windows-server.html">windows</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid px-lg-5 py-4">
+        <div class="row gx-4">
+            <aside class="col-md-4">
+                <div class="sticky-top pt-4">
+                    <img src="assets/images/netwerksegmentatie.png" alt="Netwerksegmentatie afbeelding" class="img-fluid rounded shadow mb-4">
+                    <div class="card shadow mt-4">
+                        <div class="card-body">
+                            <h2 class="h5 card-title">Inhoud</h2>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Subnetontwerp</li>
+                                <li class="mb-2">VLAN-configuratie</li>
+                                <li class="mb-2">Beveiligingszones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="col-md-8 py-4">
+                    <h1 class="display-5 mb-4">Netwerksegmentatie voor KMO</h1>
+                    <p class="lead mb-4">
+                        Dit project toont hoe kleine bedrijven hun netwerkverkeer kunnen verdelen in beveiligde segmenten met behulp van VLANs en subnetten.
+                    </p>
+
+                <section aria-labelledby="overview">
+                    <h2 id="overview" class="h3 mb-3">Projectoverzicht</h2>
+                    <p>
+                        Ik heb een bestaande netwerkinfrastructuur geanalyseerd en heringericht met duidelijke logische segmentatie. Zo werd de performance verhoogd en interne communicatie veiliger gemaakt.
+                    </p>
+                </section>
+
+                <section aria-labelledby="implementation">
+                    <h2 id="implementation" class="h3 mt-5 mb-3">Uitvoering</h2>
+                    <p>
+                        Elk bedrijfsdepartement kreeg een eigen VLAN met aparte DHCP- en firewallregels. De routers ondersteunen inter-VLAN routing met ACL’s voor toegangsbeheer.
+                    </p>
+                </section>
+
+                <section aria-labelledby="results">
+                    <h2 id="results" class="h3 mt-5 mb-3">Resultaten</h2>
+                    <ul class="mb-4">
+                        <li class="mb-2">Betere netwerkbeveiliging door isolatie</li>
+                        <li class="mb-2">Lagere broadcast overhead</li>
+                        <li class="mb-2">Schaalbaarheid voor toekomstige groei</li>
+                        <li class="mb-2">Efficiënt troubleshooting via logs per VLAN</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
+    </footer>
+</body>
+</html>
