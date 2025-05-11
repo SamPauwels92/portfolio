@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>overzicht portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Pagina</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <!-- JavaScript: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-    
-</head>
-<body class="body-dark">
-    <header> 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body class="body-dark">
+    <header>
       <nav class="navbar navbar-expand-lg bg-transparent p-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-                <img src="assets/images/SP-Logo.svg" alt="Logo" width="60">
-            </a>
-            <!-- Hamburger Menu Button (visible on mobile) -->
-            <button class="navbar-toggler -toggler-icon" type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Navigation Links (collapsible on mobile) -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav text-end">
-            <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link active text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Portfolio
+            <img src="assets/images/SP-Logo.svg" alt="Logo" width="60" />
+          </a>
+          <!-- Hamburger Menu Button (visible on mobile) -->
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links (collapsible on mobile) -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav text-end">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light"
+                  aria-current="page"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active text-light"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Portfolio
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item active" href="portfolio.html" aria-current="page">Portfolio</a>
-                  </li>
+                    <li><a class="dropdown-item nav-link active" aria-current="page" href="portfolio.html">Portfolio</a></li>
                     <li><a class="dropdown-item nav-link" href="cryptolocker.html">Cybersecurity</a></li>
                     <li><a class="dropdown-item nav-link" href="backup.html">Backup-veam</a></li>
                     <li><a class="dropdown-item nav-link" href="linux.html">linux-monitoring</a></li>
@@ -49,12 +77,14 @@
                     <li><a class="dropdown-item nav-link" href="wifi.html">wifi-optimalisatie</a></li>
                     <li><a class="dropdown-item nav-link" href="windows-server.html">windows</a></li>
                 </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
-        </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        </div>
-    </nav>
+      </nav>
     </header>
  
     <div class="container container-fluid">
@@ -72,7 +102,7 @@
           <p class="fs-5">Magnum Opus In dit project werd een geïnfecteerd systeem geanalyseerd en hersteld na een aanval met Cryptolocker-ransomware. We implementeerden een efficiënte back-upstrategie, verwijderden de malware volledig en versterkten de beveiliging met proactieve detectietools, zodat toekomstige aanvallen automatisch worden onderschept voordat ze schade kunnen aanrichten.
 
           </p>
-          <a href="project.html" rel="noopener" class="text-decoration-none text-reset">
+          <a href="cryptolocker.html" rel="noopener" class="text-decoration-none text-reset">
             <figure>
               <img src="assets/images/Magnum-Opus (2).png" class="img-fluid project-image" 
                        alt="foto van project 1" title="Magnum Opus Cybersecurity">
@@ -85,10 +115,10 @@
       <h2 class="text-uppercase fs-6 fw-bolder pt-3">Netwerksegmentatie voor KMO dummy project </h2>
       <p class="fs-5">In dit project werd een bedrijfsnetwerk opgesplitst in meerdere VLAN’s om prestaties te verbeteren en interne beveiliging te versterken. Elk team kreeg een eigen subnet, met geconfigureerde firewalls en access control lists (ACL’s). Hierdoor zijn kritieke systemen beter afgeschermd van gebruikerszones en gasten.
       </p>
-      <a href="project.html" rel="noopener" class="text-decoration-none text-reset">
+      <a href="netwerksegmentatie.html" rel="noopener" class="text-decoration-none text-reset">
         <figure>
-          <img src="assets/images/Magnum-Opus (2).png" class="img-fluid project-image" 
-                   alt="foto van project 1" title="Magnum Opus Cybersecurity">
+          <img src="assets/images/Vlan-afbeelding.png" class="img-fluid project-image" 
+                   alt="foto van project 1" title="netwerksegmentatie">
           <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
         </figure>
       </a>
@@ -97,10 +127,10 @@
   <h2 class="text-uppercase fs-6 fw-bolder pt-3">Windows Server en Active Directory Setup dummy project </h2>
   <p class="fs-5">Voor een middelgrote organisatie werd een Windows Server 2022 omgeving opgezet. Active Directory werd geconfigureerd met gebruikersgroepen, beleidsregels en roaming profiles. Automatische login scripts en netwerkshares zorgen voor efficiënt dagelijks gebruik. Back-ups en failover werden voorzien via Hyper-V replicatie.
   </p>
-  <a href="project.html" rel="noopener" class="text-decoration-none text-reset">
+  <a href="windows-server.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
       <img src="assets/images/Server-afbeelding-GPT.png" class="img-fluid project-image" 
-               alt="foto van project 1" title="Magnum Opus Cybersecurity">
+               alt="foto van project 1" title="Windows Server">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -110,10 +140,10 @@
   <p class="fs-5">De bestaande Wi-Fi infrastructuur werd geanalyseerd en herwerkt. Access points zijn strategisch herplaatst en geconfigureerd met load balancing, band steering en WPA3-beveiliging. Gebruikersrapporten tonen een sterke verbetering in dekking, snelheid en betrouwbaarheid. De monitoring gebeurt via een cloudgebaseerd controllerplatform.</p>
 
 
-  <a href="project.html" rel="noopener" class="text-decoration-none text-reset">
+  <a href="wifi.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
-      <img src="assets/images/Magnum-Opus (2).png" class="img-fluid project-image" 
-               alt="foto van project 1" title="Magnum Opus Cybersecurity">
+      <img src="assets/images/Wi-Fi image.png" class="img-fluid project-image" 
+               alt="foto van project 1" title="wifi optimalisatie">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -122,10 +152,10 @@
   <h2 class="text-uppercase fs-6 fw-bolder pt-3">Linux Server Monitoring met Zabbix dummy project </h2>
   <p class="fs-5">In deze oefening werd een Zabbix-monitoringserver opgezet op een Ubuntu VPS. Zowel Windows- als Linux-clients werden verbonden om CPU, geheugen, netwerk en services in real-time op te volgen. Waarschuwingen via e-mail en dashboards geven snel overzicht van de systeemprestaties en mogelijke incidenten.
   </p>
-  <a href="project.html" rel="noopener" class="text-decoration-none text-reset">
+  <a href="linux.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
-      <img src="assets/images/Magnum-Opus (2).png" class="img-fluid project-image" 
-               alt="foto van project 1" title="Magnum Opus Cybersecurity">
+      <img src="assets/images/linux-afbeelding.png" class="img-fluid project-image" 
+               alt="foto van project 1" title="linux zabbix">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -134,10 +164,10 @@
   <h2 class="text-uppercase fs-6 fw-bolder pt-3">Back-up en restore Plan met Veeam dummy project </h2>
   <p class="fs-5">Er werd een volledig back-upplan uitgewerkt en getest met Veeam Backup en Replication. Zowel volledige images als incrementele back-ups werden uitgevoerd op externe opslag. De restore-procedure werd succesvol getest voor zowel individuele bestanden als een volledige serverherstel. Documentatie werd opgesteld voor toekomstig gebruik.
   </p>
-  <a href="project.html" rel="noopener" class="text-decoration-none text-reset">
+  <a href="backup.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
-      <img src="assets/images/Magnum-Opus (2).png" class="img-fluid project-image" 
-               alt="foto van project 1" title="Magnum Opus Cybersecurity">
+      <img src="assets/images/Back-up-afbeelding.png" class="img-fluid project-image" 
+               alt="foto van project 1" title="Backup project">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
