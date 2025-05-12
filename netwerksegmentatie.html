@@ -20,6 +20,8 @@
       crossorigin="anonymous"
       defer
     ></script>
+     <!-- voeg JavaScript toe aan de pagina en laad het als de pagina geladen is. (gebruik het woord "defer"). -->
+  <script src="../js/script.js" defer></script>
   </head>
   <body class="body-dark">
     <header>
@@ -138,8 +140,8 @@
         </div>
     </main>
 
-    <footer class="text-center py-3">
-        <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
-    </footer>
+    <footer class="container-fluid text-center h6 small p-4 mt-5">
+    &copy; <span id="year"></span> Sam Pauwels. Alle rechten voorbehouden.
+  </footer>
 </body>
 </html>

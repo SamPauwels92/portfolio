@@ -20,6 +20,8 @@
       crossorigin="anonymous"
       defer
     ></script>
+     <!-- voeg JavaScript toe aan de pagina en laad het als de pagina geladen is. (gebruik het woord "defer"). -->
+  <script src="../js/script.js" defer></script>
   </head>
   <body class="body-dark">
     <header>
@@ -89,14 +91,13 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Aside with Image (Left Side) -->
-        <aside class="col-md-4">
+        <aside class="col-md-4 aside-img">
           <img
-            src="assets/images/samfototijdelijk.jpg"
+            src="assets/images/About-Foto-Sam.jpg"
             alt="foto van Sam Pauwels"
             class="img-fluid rounded"
           />
         </aside>
-
         <!-- Main Content (Right Side) -->
         <main class="col-md-8">
           <article>
@@ -149,10 +150,8 @@
         </main>
       </div>
     </div>
-    <footer>
-      <footer class="text-center p-3">
-        <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
-      </footer>
-    </footer>
+    <footer class="container-fluid text-center h6 small p-4 mt-5">
+    &copy; <span id="year"></span> Sam Pauwels. Alle rechten voorbehouden.
+  </footer>
   </body>
 </html>

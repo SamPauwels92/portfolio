@@ -29,7 +29,8 @@
   <!-- Map-specific CSS (your own styles) -->
   <link rel="stylesheet" href="css/map.css">
 
-   <!-- Custom JavaScript files -->
+  <!-- voeg JavaScript toe aan de pagina en laad het als de pagina geladen is. (gebruik het woord "defer"). -->
+  <script src="../js/script.js" defer></script>
     <script defer src="js/map-belsele.js"></script>
     <script src="js/form-handler.js" defer></script>
 </head>
@@ -133,7 +134,10 @@
                         <h3 class="fs-5 text-white mb-2">Social media</h3>
                         <div class="d-flex gap-3 fs-4">
                           <a href="#" class="text-decoration-none text-primary"><i class="bi bi-instagram"></i></a>
-                          <a href="#" class="text-decoration-none text-primary"><i class="bi bi-linkedin"></i></a>
+                         <a href="https://www.linkedin.com/in/sam-pauwels-b08b4518b/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-primary">
+  <i class="bi bi-linkedin"></i>
+</a>
+
                           <a href="#" class="text-decoration-none text-primary"><i class="bi bi-behance"></i></a>
                         </div>
                       </div>
@@ -143,18 +147,16 @@
                     <div class="text-center text-md-start my-4">
                         <h3 class="h5 text-light">Direct contact</h3>
                         <p class="mb-1 text-light"><i class="bi bi-envelope me-2"></i>sampauwels03@ap.be</p>
-                        <p class="mb-0 text-light"><i class="bi bi-phone me-2"></i>0000000000</p>
+                        <p class="mb-0 text-light"><i class="bi bi-phone me-2"></i>+123456789</p>
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
-        </div>
-    </footer>
+     <footer class="container-fluid text-center h6 small p-4 mt-5">
+    &copy; <span id="year"></span> Sam Pauwels. Alle rechten voorbehouden.
+  </footer>
      <!-- Modal HTML for Thank You Message -->
      <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
         <div class="modal-dialog">

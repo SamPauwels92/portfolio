@@ -121,7 +121,7 @@ html, body {
 }
 
 @media (min-width: 1400px) {
-  .fs-1 {  font-size: 12rem !important; }
+  .fs-1 {  font-size: 10rem !important; }
 }
 
 .name-top-left, .name-bottom-right {
@@ -144,10 +144,21 @@ html, body {
 }
 
 @media (max-width: 767px) {
-  .name-top-left, .name-bottom-right {
-    position: static;
+  .name-wrapper {
+    position: absolute;
+    bottom: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin: 0.5rem 0;
+    z-index: 2;
+  }
+
+  .name-top-left,
+  .name-bottom-right {
+    position: static;
+    margin: 0;
   }
 }
 
@@ -187,14 +198,47 @@ html, body {
 }
 
 /* ====== IMAGE STYLES ====== */
-aside img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  max-height: 100%;
-  margin-bottom: 20px;
+.aside-img {
+  padding: 0;
 }
 
+/* Algemene afbeelding styling */
+.aside-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 100vh;
+  display: block;
+}
+
+/* Grote schermen: 25% breedte en cover */
+@media (min-width: 992px) {
+  .aside-img {
+    width: 20%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .aside-img img {
+    object-fit: cover;
+    height: 100vh;
+  }
+}
+
+/* Kleine schermen: volledige breedte en afbeelding volledig tonen */
+@media (max-width: 750px) {
+  .aside-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .aside-img img {
+    object-fit: contain;
+    height: auto;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+}
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -203,7 +247,30 @@ aside img {
 .project-image:hover {
   transform: scale(1.03);
 }
+/* ====== PROJECT IMAGE UNIFORME GROOTTE ====== */
+.project-image {
+  width: 100%;
+  height: 800px; /* vaste hoogte */
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
 
+.project-image:hover {
+  transform: scale(1.03);
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--color-muted-text);
+  margin-top: 0.5rem;
+}
 .rounded { 
   border-radius: 0.25rem; 
 }
@@ -284,5 +351,20 @@ aside img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .project-image {
+    height: 450px;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    align-items: flex-end !important;
+  }
+
+  .navbar-nav {
+    align-items: flex-end;
+    text-align: right;
   }
 }

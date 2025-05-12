@@ -20,6 +20,8 @@
       crossorigin="anonymous"
       defer
     ></script>
+     <!-- voeg JavaScript toe aan de pagina en laad het als de pagina geladen is. (gebruik het woord "defer"). -->
+  <script src="../js/script.js" defer></script>
   </head>
   <body class="body-dark">
     <header>
@@ -87,7 +89,7 @@
       </nav>
     </header>
  
-    <div class="container container-fluid">
+    <div class="container-fluid px-lg-5 py-4">
       <div class="row">
         <main class="col-md-12">
           <section id="overzichtprojecten" class="row">
@@ -105,7 +107,7 @@
           <a href="cryptolocker.html" rel="noopener" class="text-decoration-none text-reset">
             <figure>
               <img src="assets/images/Magnum-Opus (2).png" class="img-fluid project-image" 
-                       alt="foto van project 1" title="Magnum Opus Cybersecurity">
+                       alt="foto van magnum opus" title="Magnum Opus Cybersecurity">
               <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
             </figure>
           </a>
@@ -118,7 +120,7 @@
       <a href="netwerksegmentatie.html" rel="noopener" class="text-decoration-none text-reset">
         <figure>
           <img src="assets/images/Vlan-afbeelding.png" class="img-fluid project-image" 
-                   alt="foto van project 1" title="netwerksegmentatie">
+                   alt="foto van Vlan gegenereerd met GPT" title="netwerksegmentatie">
           <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
         </figure>
       </a>
@@ -130,7 +132,7 @@
   <a href="windows-server.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
       <img src="assets/images/Server-afbeelding-GPT.png" class="img-fluid project-image" 
-               alt="foto van project 1" title="Windows Server">
+               alt="foto van van server gegenereerd met GPT" title="Windows Server">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -143,7 +145,7 @@
   <a href="wifi.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
       <img src="assets/images/Wi-Fi image.png" class="img-fluid project-image" 
-               alt="foto van project 1" title="wifi optimalisatie">
+               alt="foto van Wifi gegeneerd met gpt" title="wifi optimalisatie">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -155,7 +157,7 @@
   <a href="linux.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
       <img src="assets/images/linux-afbeelding.png" class="img-fluid project-image" 
-               alt="foto van project 1" title="linux zabbix">
+               alt="foto van linux gegegeneerd met gpt" title="linux zabbix">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -167,7 +169,7 @@
   <a href="backup.html" rel="noopener" class="text-decoration-none text-reset">
     <figure>
       <img src="assets/images/Back-up-afbeelding.png" class="img-fluid project-image" 
-               alt="foto van project 1" title="Backup project">
+               alt="foto van backup gegeneerd met gpt" title="Backup project">
       <figcaption class="h6 small mt-2">&copy; Sam Pauwels</figcaption>
     </figure>
   </a>
@@ -177,8 +179,8 @@
         </main>
       </div>
     </div>
-    <footer class="text-center">
-        <p>&copy; 2025 Sam Pauwels. Alle rechten voorbehouden.</p>
-    </footer>
+    <footer class="container-fluid text-center h6 small p-4 mt-5">
+    &copy; <span id="year"></span> Sam Pauwels. Alle rechten voorbehouden.
+  </footer>
 </body>
 </html>
