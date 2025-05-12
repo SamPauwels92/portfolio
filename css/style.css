@@ -385,3 +385,14 @@ figcaption {
     text-align: right;
   }
 }
+.btn-light-brown {
+  background-color: var(--color-brown);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light-brown:hover {
+  background-color: var(--color-brown-dark);
+  color: white;
+}
