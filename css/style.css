@@ -159,6 +159,23 @@ html, body {
   .name-bottom-right {
     position: static;
     margin: 0;
+    text-align: center;
+  }
+
+  /* Toevoeging om de naam onder elkaar en rechts te centreren */
+  .name-wrapper .name-top-left,
+  .name-wrapper .name-bottom-right {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+
+  .name-top-left {
+    margin-bottom: 10px; /* Ruimte tussen de twee namen */
+  }
+
+  .name-bottom-right {
+    margin-top: 10px;
   }
 }
 
