@@ -142,40 +142,29 @@ html, body {
   bottom: 20%;
   right: 5%;
 }
+/* Standaard: toon alleen de grote-versie */
+.name-small {
+  display: none;
+}
 
 @media (max-width: 767px) {
-  .name-wrapper {
+  .name-large {
+    display: none; /* verberg grote layout */
+  }
+
+  .name-small {
+    display: block;
     position: absolute;
-    bottom: 8rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    top: 8rem;
+    left: 1rem;
     z-index: 2;
   }
 
-  .name-top-left,
-  .name-bottom-right {
-    position: static;
-    margin: 0;
-    text-align: center;
-  }
-
-  /* Toevoeging om de naam onder elkaar en rechts te centreren */
-  .name-wrapper .name-top-left,
-  .name-wrapper .name-bottom-right {
-    display: block;
-    text-align: center;
-    margin: 0;
-  }
-
-  .name-top-left {
-    margin-bottom: 10px; /* Ruimte tussen de twee namen */
-  }
-
-  .name-bottom-right {
-    margin-top: 10px;
+  .vertical-name {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: white;
+    text-align: left;
   }
 }
 
@@ -395,4 +384,61 @@ figcaption {
 .btn-light-brown:hover {
   background-color: var(--color-brown-dark);
   color: white;
+}
+/* Aangepaste stijl voor bruine knoppen */
+.btn-primary {
+    background-color: #6f4f29; /* Bruine kleur */
+    border-color: #6f4f29;     /* Kleur van de rand */
+}
+
+.btn-primary:hover {
+    background-color: #5e4023; /* Donkerder bruin voor hover effect */
+    border-color: #5e4023;      /* Randkleur voor hover effect */
+}
+
+/* Social media knoppen in bruin */
+.btn-social {
+    background-color: #6f4f29; /* Bruine kleur voor social media knoppen */
+    border-color: #6f4f29;     /* Kleur van de rand */
+    color: white;              /* Witte tekst */
+}
+
+.btn-social:hover {
+    background-color: #5e4023; /* Donkerder bruin voor hover effect */
+    border-color: #5e4023;      /* Randkleur voor hover effect */
+    color: white;              /* Witte tekst bij hover */
+}
+
+/* Social media iconen */
+.text-social {
+    color: #6f4f29;  /* Bruine kleur voor social media iconen */
+}
+
+.text-social:hover {
+    color: #5e4023;  /* Donkerder bruin voor hover effect */
+}
+/* Kleur van de link in het privacybeleid aanpassen naar bruin */
+.form-check-label a {
+    color: #6f4f29 !important;  /* Bruine kleur */
+}
+
+.form-check-label a:hover {
+    color: #5e4023 !important;  /* Donkerder bruin voor hover effect */
+}
+
+/* ====== ACTIVE NAVIGATION LINK ====== */
+.nav-link.active {
+  background-color: var(--color-brown);  /* Bruine achtergrondkleur */
+  color: white;  /* Witte tekst om goed leesbaar te blijven */
+}
+
+.nav-link.active:hover {
+  background-color: var(--color-brown-dark);  /* Donkerder bruin bij hover */
+  color: white;  /* Witte tekst bij hover */
+}
+.text-brown {
+  color: #6f4f29; /* Bijvoorbeeld SaddleBrown, of kies een andere bruintint */
+}
+.text-brown:hover {
+  color: #5e4023; /* Een lichtere bruintint bij hover */
 }
