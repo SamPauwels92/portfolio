@@ -1,17 +1,48 @@
-/* ====== ROOT VARIABELEN ====== */
+/* =====================================
+   ROOT VARIABELEN
+   Algemene kleuren en lettertypen
+====================================== */
 :root {
-  --color-dark-bg: #262626;
-  --color-overlay: rgba(0, 0, 0, 0.5);
-  --color-light-text: #bfbfbf;
-  --color-muted-text: #bfbfbf;
-  --color-hover-text: #f8f8f8;
-  --color-section-bg: #262626;
-  --color-brown: #A97455;
-  --color-brown-dark: #926043;
-  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-dark-bg: #262626; /* Donkere achtergrondkleur */
+  --color-overlay: rgba(0, 0, 0, 0.5); /* Halftransparante overlay */
+  --color-light-text: #bfbfbf; /* Lichtere tekstkleur */
+  --color-muted-text: #bfbfbf; /* Gedempte tekstkleur */
+  --color-hover-text: #f8f8f8; /* Tekstkleur bij hover */
+  --color-section-bg: #262626; /* Achtergrond voor secties */
+  --color-brown: #A97455; /* Bruin voor knoppen of accenten */
+  --color-brown-dark: #926043; /* Donkerdere bruin voor hover */
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Hoofdlettertype */
 }
 
-/* ====== BASE STYLES ====== */
+/* =====================================
+   ANIMATIES
+   Voor fade-in effecten van tekst
+====================================== */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =====================================
+   BASISSTIJLEN VOOR PAGINA
+====================================== */
 html, body {
   margin: 0;
   padding: 0;
@@ -28,15 +59,16 @@ html, body {
   color: var(--color-light-text);
 }
 
-/* ====== BACKGROUND STYLES ====== */
-.background-image, 
-.dark-overlay {
+/* =====================================
+   ACHTERGROND EN OVERLAY
+====================================== */
+.background-image, .dark-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -1; /* Achter alles plaatsen */
 }
 
 .background-image {
@@ -47,7 +79,39 @@ html, body {
   background-color: var(--color-overlay);
 }
 
-/* ====== TYPOGRAFIE ====== */
+/* =====================================
+   ANIMATIES VOOR NAAMTEKST
+====================================== */
+.name-top-left, .name-bottom-right {
+  position: absolute;
+  color: white;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  z-index: 1;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.name-top-left {
+  top: 20%;
+  left: 10%;
+  animation-name: fadeInLeft;
+}
+
+.name-bottom-right {
+  bottom: 20%;
+  right: 5%;
+  animation-name: fadeInRight;
+  animation-delay: 0.3s; /* Vertraging voor gespreide animatie */
+}
+
+/* =====================================
+   TYPOGRAFIE
+   Verschillende groottes en stijlen
+====================================== */
 .headline-large {
   font-size: 45px;
 }
@@ -63,6 +127,31 @@ html, body {
   font-weight: 300;
 }
 
+.fs-1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .fs-1 { font-size: 6rem; }
+}
+
+@media (min-width: 992px) {
+  .fs-1 { font-size: 8rem; }
+}
+
+@media (min-width: 1200px) {
+  .fs-1 { font-size: 10rem; }
+}
+
+@media (min-width: 1400px) {
+  .fs-1 { font-size: 7rem !important; }
+}
+
+/* =====================================
+   INTERACTIEVE TEKST VOOR STUDENTEN
+====================================== */
 .student-text {
   font-size: 1.75rem;
   font-weight: 300;
@@ -100,56 +189,129 @@ html, body {
   max-height: 200px;
   opacity: 1;
 }
-
-/* ====== NAAMGROOTTE EN POSITIES ====== */
-.fs-1 {
-  font-size: 3rem;
-  line-height: 1.1;
-  font-weight: 300;
+/* =====================================
+   PORTFOLIO LAYOUT - BELANGRIJKSTE AANPASSINGEN
+====================================== */
+#overzichtprojecten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .fs-1 { font-size: 6rem; }
+.portfolio-item {
+  margin-bottom: 3rem;
 }
 
+.project-image:hover {
+  transform: scale(1.03);
+}
+
+/* Kleine schermen (<768px) - Eerst tekst, dan afbeelding */
+@media (max-width: 767.98px) {
+  .portfolio-item {
+    width: 100%;
+  }
+  
+  .portfolio-item > .row > div {
+    width: 100%;
+  }
+  
+  .project-image {
+    height: 300px;
+    margin-top: 1rem;
+  }
+}
+
+/* Medium schermen (768px-991px) - Afbeelding rechts, tekst links */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .portfolio-item {
+    width: 100%;
+  }
+  
+  .portfolio-item > .row {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .portfolio-item > .row > div:first-child {
+    flex: 1;
+    padding-right: 1.5rem;
+  }
+  
+  .portfolio-item > .row > div:last-child {
+    flex: 1;
+  }
+  
+  .project-image {
+    height: 350px;
+  }
+}
+
+/* Grote schermen (≥992px) - 2 projecten naast elkaar */
 @media (min-width: 992px) {
-  .fs-1 { font-size: 8rem; }
+  .portfolio-item {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  
+  .portfolio-item > .row {
+    display: block;
+  }
+  
+ .project-image {
+    height: 200px; /* kleiner dan 400px */
+    width: 100%; /* vul breedte van container */
+    object-fit: cover; /* voorkom uitrekken */
+  }
 }
 
-@media (min-width: 1200px) {
-  .fs-1 { font-size: 10rem; }
+/* Voeg dit toe voor lijnen tussen portfolio items */
+.portfolio-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
-@media (min-width: 1400px) {
-  .fs-1 {  font-size: 7rem !important; }
+/* Lijn onder elk portfolio item op kleine schermen */
+@media (max-width: 991.98px) {
+  .portfolio-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Verberg de handmatige hr's op kleine schermen */
+  #overzichtprojecten hr {
+    display: none;
+  }
 }
 
-.name-top-left, .name-bottom-right {
-  position: absolute;
-  color: white;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0;
-  z-index: 1;
+  
+  /* Toon alleen hr's tussen rijen van projecten */
+  #overzichtprojecten hr {
+    display: block;
+    flex: 0 0 100%;
+    margin: 1rem 0;
+  }
+
+/* =====================================
+   RESPONSIVE NAAM WEERGAVE
+   Verschillende groottes voor schermen
+====================================== */
+.name-large {
+  display: block;
 }
 
-.name-top-left {
-  top: 20%;
-  left: 10%;
-}
-
-.name-bottom-right {
-  bottom: 20%;
-  right: 5%;
-}
-/* Standaard: toon alleen de grote-versie */
 .name-small {
   display: none;
 }
 
 @media (max-width: 767px) {
   .name-large {
-    display: none; /* verberg grote layout */
+    display: none; /* Verberg grote versie */
   }
 
   .name-small {
@@ -158,6 +320,7 @@ html, body {
     top: 8rem;
     left: 1rem;
     z-index: 2;
+    animation: fadeInLeft 1s ease-out forwards;
   }
 
   .vertical-name {
@@ -165,50 +328,53 @@ html, body {
     line-height: 1.2;
     color: white;
     text-align: left;
+    animation-delay: 0.1s;
   }
 }
 
-/* ====== MINIMALISTISCHE DROPDOWN ====== */
+/* =====================================
+   DROPDOWN MENU STYLING
+====================================== */
 .dropdown-menu {
-  background-color: transparent;
+  background-color: rgba(30, 30, 30, 0.95);
   border: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 0;
-  margin-top: 0.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  z-index: 1050;
 }
 
 .dropdown-menu .dropdown-item {
   background-color: transparent;
-  color: var(--color-muted-text);
-  padding: 0.5rem 1rem;
+  color: var(--color-light-text);
+  padding: 0.5rem 1.25rem;
   font-weight: 300;
   border-radius: 0;
-  transition: color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  color: var(--color-light-text);
-  background-color: transparent;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
   text-decoration: underline;
 }
 
 .navbar .dropdown-toggle::after {
-  display: none;
+  display: none; /* Verberg standaard pijl */
 }
-
-/* ====== NAVIGATION ====== */
-.navbar-toggler-icon { 
-  filter: invert(1); 
+.navbar-toggler-icon {
+  filter: invert(1);
 }
-
-/* ====== IMAGE STYLES ====== */
+/* =====================================
+   AFBEELDINGEN
+   Styling voor aside en project-afbeeldingen
+====================================== */
 .aside-img {
   padding: 0;
 }
 
-/* Algemene afbeelding styling */
 .aside-img img {
   width: 100%;
   height: auto;
@@ -217,7 +383,6 @@ html, body {
   display: block;
 }
 
-/* Grote schermen: 25% breedte en cover */
 @media (min-width: 992px) {
   .aside-img {
     width: 20%;
@@ -226,12 +391,10 @@ html, body {
   }
 
   .aside-img img {
-    object-fit: cover;
     height: 100vh;
   }
 }
 
-/* Kleine schermen: volledige breedte en afbeelding volledig tonen */
 @media (max-width: 750px) {
   .aside-img {
     width: 100%;
@@ -245,25 +408,10 @@ html, body {
     margin-bottom: 1rem;
   }
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
-}
-
-.project-image:hover {
-  transform: scale(1.03);
-}
-/* ====== PROJECT IMAGE UNIFORME GROOTTE ====== */
-.project-image {
-  width: 100%;
-  height: 800px; /* vaste hoogte */
-  object-fit: cover;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-}
-
-.project-image:hover {
-  transform: scale(1.03);
 }
 
 figure {
@@ -277,11 +425,14 @@ figcaption {
   color: var(--color-muted-text);
   margin-top: 0.5rem;
 }
-.rounded { 
-  border-radius: 0.25rem; 
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
-/* ====== LAYOUT STYLES ====== */
+/* =====================================
+   LAYOUT & CONTAINERS
+====================================== */
 .container-fluid {
   padding: 0;
   max-width: 100%;
@@ -301,41 +452,108 @@ figcaption {
   background-color: var(--color-section-bg);
 }
 
-/* ====== CARD & LINK STYLES ====== */
-.text-light { 
-  color: var(--color-muted-text); 
+/* =====================================
+   LINKS, TEKST EN BUTTON STYLES
+====================================== */
+.text-light {
+  color: var(--color-muted-text);
 }
 
-.text-light:hover { 
-  color: var(--color-hover-text); 
+.text-light:hover {
+  color: var(--color-hover-text);
 }
 
-.text-decoration-none { 
-  text-decoration: none; 
+.text-decoration-none {
+  text-decoration: none;
 }
 
-/* ====== SPACING UTILITIES ====== */
-.mt-5 { 
-  margin-top: 3rem; 
+.btn-light-brown {
+  background-color: var(--color-brown);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
-.mb-4 { 
-  margin-bottom: 1.5rem; 
+.btn-light-brown:hover {
+  background-color: var(--color-brown-dark);
+  color: white;
 }
 
-/* ====== FOOTER ====== */
+.btn-primary {
+  background-color: #6f4f29;
+  border-color: #6f4f29;
+}
+
+.btn-primary:hover {
+  background-color: #5e4023;
+  border-color: #5e4023;
+}
+
+.btn-social {
+  background-color: #6f4f29;
+  border-color: #6f4f29;
+  color: white;
+}
+
+.btn-social:hover {
+  background-color: #5e4023;
+  border-color: #5e4023;
+  color: white;
+}
+
+.text-social {
+  color: #6f4f29;
+}
+
+.text-social:hover {
+  color: #5e4023;
+}
+
+.form-check-label a {
+  color: #6f4f29 !important;
+}
+
+.form-check-label a:hover {
+  color: #5e4023 !important;
+}
+
+/* =====================================
+   ACTIEVE NAVIGATIELINK
+====================================== */
+.nav-link.active {
+  background-color: var(--color-brown);
+  color: white;
+}
+
+.nav-link.active:hover {
+  background-color: var(--color-brown-dark);
+  color: white;
+}
+
+.text-brown {
+  color: #6f4f29;
+}
+
+.text-brown:hover {
+  color: #5e4023;
+}
+
+/* =====================================
+   FOOTER EN OVERIG
+====================================== */
 .footer-area {
   width: 100%;
   padding-bottom: 1rem;
 }
 
-/* ====== STICKY ASIDE ====== */
 .sticky-top {
   top: 20px;
   padding-right: 15px;
 }
 
-/* ====== RESPONSIVE ADJUSTMENTS ====== */
+/* =====================================
+   RESPONSIVE AANPASSINGEN
+====================================== */
 @media (min-width: 576px) {
   .container-fluid {
     padding: 0 15px;
@@ -359,11 +577,7 @@ figcaption {
     justify-content: center;
   }
 }
-@media (max-width: 768px) {
-  .project-image {
-    height: 450px;
-  }
-}
+
 @media (max-width: 991.98px) {
   .navbar-collapse {
     align-items: flex-end !important;
@@ -373,72 +587,4 @@ figcaption {
     align-items: flex-end;
     text-align: right;
   }
-}
-.btn-light-brown {
-  background-color: var(--color-brown);
-  color: white;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-light-brown:hover {
-  background-color: var(--color-brown-dark);
-  color: white;
-}
-/* Aangepaste stijl voor bruine knoppen */
-.btn-primary {
-    background-color: #6f4f29; /* Bruine kleur */
-    border-color: #6f4f29;     /* Kleur van de rand */
-}
-
-.btn-primary:hover {
-    background-color: #5e4023; /* Donkerder bruin voor hover effect */
-    border-color: #5e4023;      /* Randkleur voor hover effect */
-}
-
-/* Social media knoppen in bruin */
-.btn-social {
-    background-color: #6f4f29; /* Bruine kleur voor social media knoppen */
-    border-color: #6f4f29;     /* Kleur van de rand */
-    color: white;              /* Witte tekst */
-}
-
-.btn-social:hover {
-    background-color: #5e4023; /* Donkerder bruin voor hover effect */
-    border-color: #5e4023;      /* Randkleur voor hover effect */
-    color: white;              /* Witte tekst bij hover */
-}
-
-/* Social media iconen */
-.text-social {
-    color: #6f4f29;  /* Bruine kleur voor social media iconen */
-}
-
-.text-social:hover {
-    color: #5e4023;  /* Donkerder bruin voor hover effect */
-}
-/* Kleur van de link in het privacybeleid aanpassen naar bruin */
-.form-check-label a {
-    color: #6f4f29 !important;  /* Bruine kleur */
-}
-
-.form-check-label a:hover {
-    color: #5e4023 !important;  /* Donkerder bruin voor hover effect */
-}
-
-/* ====== ACTIVE NAVIGATION LINK ====== */
-.nav-link.active {
-  background-color: var(--color-brown);  /* Bruine achtergrondkleur */
-  color: white;  /* Witte tekst om goed leesbaar te blijven */
-}
-
-.nav-link.active:hover {
-  background-color: var(--color-brown-dark);  /* Donkerder bruin bij hover */
-  color: white;  /* Witte tekst bij hover */
-}
-.text-brown {
-  color: #6f4f29; /* Bijvoorbeeld SaddleBrown, of kies een andere bruintint */
-}
-.text-brown:hover {
-  color: #5e4023; /* Een lichtere bruintint bij hover */
 }
