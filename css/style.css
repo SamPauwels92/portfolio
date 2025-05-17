@@ -222,8 +222,8 @@ html, body {
   }
 }
 
-/* Medium schermen (768px-991px) - Afbeelding rechts, tekst links */
-@media (min-width: 768px) and (max-width: 991.98px) {
+/* Medium schermen (768px-1023px) - Afbeelding rechts, tekst links */
+@media (min-width: 768px) and (max-width: 1023px) {
   .portfolio-item {
     width: 100%;
   }
@@ -247,8 +247,8 @@ html, body {
   }
 }
 
-/* Grote schermen (≥992px) - 2 projecten naast elkaar */
-@media (min-width: 992px) {
+/* Grote schermen (≥1024px) - 2 projecten naast elkaar */
+@media (min-width: 1024px) {
   .portfolio-item {
     flex: 0 0 calc(50% - 1rem);
   }
