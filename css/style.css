@@ -550,6 +550,11 @@ figcaption {
   top: 20px;
   padding-right: 15px;
 }
+.index-footer
+{
+  background-color: transparent !important; /* Of een semi-transparante variant als rgba(0,0,0,0.5) */
+  color: white;
+}
 
 /* =====================================
    RESPONSIVE AANPASSINGEN
